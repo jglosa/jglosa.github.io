@@ -27,7 +27,7 @@ experiences:
     date: "Jul 2025 - Aug 2025"
     project: "Digital Wellbeing"
     technologies: ["HCI", "Java", "Kotlin", "C++"]
-    description: ""
+    description: "Micro financial Advantage"
   
   - company: "RWTH Aachen"
     position: "Exchange Student"
