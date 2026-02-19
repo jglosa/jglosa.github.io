@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 
 intro: |
-👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I am currently advised by [Prof. Eunkyung Jo](https://eunkyungjo.com/) and conduct my research in the H2CI Lab. I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
+  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I am currently advised by [Prof. Eunkyung Jo](https://eunkyungjo.com/) and conduct my research in the H2CI Lab. I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
 
 education:
   - school: "Pohang University of Science and Technology (POSTECH)"
@@ -23,7 +23,7 @@ education:
 
 experiences:
   - company: "IC Lab"
-    position: "Underaduate Intern"
+    position: "Undergraduate Intern"
     date: "Jul 2025 - Aug 2025"
     project: "Digital Wellbeing"
     technologies: ["HCI", "Java", "Kotlin", "C++"]
@@ -32,25 +32,16 @@ experiences:
   - company: "RWTH Aachen"
     position: "Exchange Student"
     date: "Aug 2024 - Feb 2025"
-    project:
     description: ""
   
   - company: "Conpapa"
     position: "Marketing Intern"
     date: "Jun 2024 - Aug 2024"
-    project:
     description: ""
 
   - company: "Korea Brain Research Institute"
     position: "Intern"
     date: "Jul 2023 - Aug 2023"
-    project:
-    description: ""
-
-  - company: "RWTH Aachen"
-    position: "Exchange Student"
-    date: "Aug 2024 - Feb 2025"
-    project:
     description: ""
 
 research_projects:
@@ -74,5 +65,4 @@ research_projects:
     project: "Interaction Segmentation"
     technologies: ["CG", "CV", "Pytorch"]
     description: ""
-
-  ---
+---
