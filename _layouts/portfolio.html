@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        <!-- Intro Section -->
+        <div class="intro-section">
+          {{ page.intro | markdownify }}
+        </div>
+
+        <!-- Education Section -->
+        {% if page.education %}
+        <div class="content-section">
+          <h2 class="section-title">Education</h2>
+          <div class="experience-group">
+            {% for edu in page.education %}
+            <div class="experience-item">
+              <div class="left-column">
+                <div class="company-name">{{ edu.school }}</div>
+                {% if edu.degree %}<div class="position">{{ edu.degree }}</div>{% endif %}
+                <div class="date">{{ edu.date }}</div>
+              </div>
+              <div class="right-column">
+                {% if edu.department %}<div class="project-title">{{ edu.department }}</div>{% endif %}
+                {% if edu.description %}
+                <div class="description">{{ edu.description | markdownify }}</div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Experiences Section -->
+        {% if page.experiences %}
+        <div class="content-section">
+          <h2 class="section-title">Experiences</h2>
+          <div class="experience-group">
+            {% for exp in page.experiences %}
+            <div class="experience-item">
+              <div class="left-column">
+                <div class="company-name">{{ exp.company }}</div>
+                {% if exp.position %}<div class="position">{{ exp.position }}</div>{% endif %}
+                <div class="date">{{ exp.date }}</div>
+              </div>
+              <div class="right-column">
+                {% if exp.projects %}
+                  {% for proj in exp.projects %}
+                    <div class="project-title">{{ proj.title }}</div>
+                    {% if proj.technologies %}
+                    <div class="tech-tags">
+                      {% for tech in proj.technologies %}
+                      <span class="tech-tag">{{ tech }}</span>
+                      {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="description">{{ proj.description | markdownify }}</div>
+                  {% endfor %}
+                {% else %}
+                  {% if exp.project %}<div class="project-title">{{ exp.project }}</div>{% endif %}
+                  {% if exp.technologies %}
+                  <div class="tech-tags">
+                    {% for tech in exp.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  <div class="description">{{ exp.description | markdownify }}</div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Research Projects Section -->
+        {% if page.research_projects %}
+        <div class="content-section">
+          <h2 class="section-title">Research Projects</h2>
+          <div class="experience-group">
+            {% for rp in page.research_projects %}
+            <div class="experience-item">
+              <div class="left-column">
+                <div class="company-name">{{ rp.name }}</div>
+                {% if rp.type %}<div class="position">{{ rp.type }}</div>{% endif %}
+                {% if rp.role %}<div class="position">{{ rp.role }}</div>{% endif %}
+                <div class="date">{{ rp.date }}</div>
+              </div>
+              <div class="right-column">
+                {% if rp.project %}<div class="project-title">{{ rp.project }}</div>{% endif %}
+                {% if rp.technologies %}
+                <div class="tech-tags">
+                  {% for tech in rp.technologies %}
+                  <span class="tech-tag">{{ tech }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+                <div class="description">{{ rp.description | markdownify }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </section>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+    </div>
+  </article>
+</div>
