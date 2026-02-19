@@ -36,7 +36,7 @@ experiences:
     dexcription: ""
   
   - company: "Conpapa"
-    position: "Intern"
+    position: "Marketing Intern"
     date: "Jun 2024 - Aug 2024"
     project:
     dexcription: ""
