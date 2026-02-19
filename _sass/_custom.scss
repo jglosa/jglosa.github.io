@@ -1,0 +1,90 @@
+/* Custom styles for portfolio page */
+
+.intro-section {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--global-text-color);
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--global-border-color);
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 0.8fr 2.5fr;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  .left-column {
+    .company-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--global-text-color);
+      margin-bottom: 0.3rem;
+    }
+
+    .position, .date {
+      color: var(--global-text-color-light);
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .right-column {
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--global-text-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .tech-tags {
+      margin-bottom: 0.8rem;
+
+      .tech-tag {
+        display: inline-block;
+        background-color: var(--global-border-color);
+        color: var(--global-code-text-color);
+        padding: 0.2rem 0.6rem;
+        margin: 0.1rem 0.3rem 0.1rem 0;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+
+    .description {
+      color: var(--global-text-color);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.author__desktop a {
+  display: inline;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
