@@ -33,25 +33,25 @@ experiences:
     position: "Exchange Student"
     date: "Aug 2024 - Feb 2025"
     project:
-    dexcription: ""
+    description: ""
   
   - company: "Conpapa"
     position: "Marketing Intern"
     date: "Jun 2024 - Aug 2024"
     project:
-    dexcription: ""
+    description: ""
 
   - company: "Korea Brain Research Institute"
     position: "Intern"
     date: "Jul 2023 - Aug 2023"
     project:
-    dexcription: ""
+    description: ""
 
   - company: "RWTH Aachen"
     position: "Exchange Student"
     date: "Aug 2024 - Feb 2025"
     project:
-    dexcription: ""
+    description: ""
 
 research_projects:
   - name: "Research Project II"
@@ -74,3 +74,5 @@ research_projects:
     project: "Interaction Segmentation"
     technologies: ["CG", "CV", "Pytorch"]
     description: ""
+
+  ---
