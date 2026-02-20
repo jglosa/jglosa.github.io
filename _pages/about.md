@@ -27,11 +27,6 @@ experiences:
     technologies: ["HCI", "Java", "Kotlin", "Android", "Mobile Computing"]
     description: "Developed 'GoalCast', a smartphone usage forecasting application aimed at improving digital wellbeing. Conducted user studies to observe behavioral changes in screen time and analyzed the collected usage data to evaluate the app's effectiveness."
   
-  - company: "RWTH Aachen"
-    position: "Exchange Student"
-    date: "Aug 2024 - Feb 2025"
-    description: "Immersed in German culture while developing language skills and building lasting friendships with international students. Discovered new interests in traveling and exploring local European cultures, gaining a deep appreciation for cultural diversity and different perspectives."
-  
   - company: "Conpapa"
     position: "Marketing Intern"
     project: "Brand marketing"
@@ -75,7 +70,7 @@ research_projects:
     technologies: ["VR", "Unity", "C#", "Oculus Quest 2"]
     description: "Developed a VR food-making game simulating a restaurant environment. Focused on enhancing the tactile cooking experience using VR controllers, differentiating from existing food games by emphasizing embodied realism."
 
-  - name: "Computer Graphics Lab, POSTECH"
+  - name: "Computer Graphics Lab"
     role: ""
     date: "Jan 2023 - Feb 2023"
     project: "3D Reconstruction Software Benchmarking"
