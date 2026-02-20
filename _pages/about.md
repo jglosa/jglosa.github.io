@@ -78,7 +78,7 @@ research_projects:
     description: "Analyzed and improved the underlying principles of the Reality Capture 3D reconstruction software through extensive benchmarking using photogrammetry techniques."
 
   - name: "Undergraduate Group Research Program (UGRP)"
-    role: "Undergraduate Researcher"
+    role: ""
     date: "May 2021 - Feb 2022"
     project: "Interior Simulation using VR"
     technologies: ["VR","CV","CG ","3D Reconstruction", "Photogrammetry"]
