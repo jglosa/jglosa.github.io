@@ -45,12 +45,18 @@
 }
 
 .masthead__menu {
-
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+
+  /* 메뉴들을 한 줄로 가로 정렬 */
+  ul.visible-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 }
 
@@ -66,16 +72,29 @@
   }
 }
 
+/* 현재 위치한 메뉴는 클릭 방지 및 밑줄 표시 */
 .masthead__menu-item.selected a {
   color: var(--global-text-color);
   font-weight: 700;
   border-bottom: 2px solid var(--global-text-color);
-  pointer-events: none; /* Move this here */
-  cursor: default; /* Move this here too */
+  pointer-events: none;
+  cursor: default;
 }
 
 .masthead__menu-item.selected a:hover {
   color: var(--global-text-color);
   border-bottom: 2px solid var(--global-text-color);
-  /* No need to repeat pointer-events and cursor here */
+}
+
+/* 왼쪽 위 이름은 언제나 클릭 가능하게 예외 처리 */
+.masthead__menu-item.masthead__menu-item--lg.selected a {
+  pointer-events: auto;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+/* 다크모드/라이트모드 토글 버튼을 가장 오른쪽으로 밀어내기 */
+#theme-toggle {
+  margin-left: auto;
+  cursor: pointer;
 }
