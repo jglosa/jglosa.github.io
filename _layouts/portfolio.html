@@ -42,13 +42,21 @@ layout: default
           <h2 class="section-title">Education</h2>
           <div class="experience-group">
             {% for edu in page.education %}
-            <div class="single-column-item">
-                <div class="company-name">{{ edu.school }}</div>
-                {% if edu.degree %}<div class="position">{{ edu.degree }}</div>{% endif %}
-                <div class="date">{{ edu.date }}</div>
-                {% if edu.description %}
-                <div class="description">{{ edu.description | markdownify }}</div>
-                {% endif %}
+            <div style="padding-bottom: 1.5rem; margin-bottom: 1.5rem; {% unless forloop.last %}border-bottom: 1px solid var(--global-border-color);{% endunless %}">
+              <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
+                {{ edu.school }}
+              </div>
+              <div style="font-size: 1.05rem; font-weight: 600; color: var(--global-text-color); margin-bottom: 0.2rem;">
+                {% if edu.degree %}{{ edu.degree }}{% endif %}{% if edu.degree and edu.department %}, {% endif %}{% if edu.department %}{{ edu.department }}{% endif %}
+              </div>
+              <div style="color: var(--global-text-color-light); font-size: 0.9rem;">
+                {{ edu.date }}
+              </div>
+              {% if edu.description %}
+              <div style="color: var(--global-text-color); line-height: 1.6; font-size: 0.95rem; margin-top: 0.5rem;">
+                {{ edu.description | markdownify }}
+              </div>
+              {% endif %}
             </div>
             {% endfor %}
           </div>
@@ -101,7 +109,7 @@ layout: default
         <!-- Research Projects Section -->
         {% if page.research_projects %}
         <div class="content-section">
-          <h2 class="section-title">Research Projects</h2>
+          <h2 class="section-title">Projects & Honors</h2>
           <div class="experience-group">
             {% for rp in page.research_projects %}
             <div class="experience-item">
