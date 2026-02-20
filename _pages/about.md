@@ -38,6 +38,7 @@ experiences:
     position: "Marketing Intern"
     project: "Brand marketing"
     date: "Jul 2024 - Aug 2024"
+    technologies: ["SEO", "Premiere Pro", "Content Marketing"]
     description: "Created video and written content for branding channels. Improved SEO and user engagement through strategic content planning."
 
   - company: "Korea Brain Research Institute"
@@ -66,7 +67,7 @@ research_projects:
     role: ""
     date: "Feb 2025 - Jun 2025"
     project: "Interactive Segmentation of 3D Brain MRI (Medical Image Processing Lab)"
-    technologies: ["Computer Vision", "PyTorch", "ViT"]
+    technologies: ["CV", "CG", "PyTorch", "Python"]
     description: "Applied Vision Transformer (ViT)-based interactive segmentation techniques to medical imaging. Extended 2D segmentation outputs into 3D volumes via slice-to-slice label propagation."
 
   - name: "POSTECH Metaverse Contents Contest"
@@ -80,13 +81,13 @@ research_projects:
     role: ""
     date: "Jan 2023 - Feb 2023"
     project: "3D Reconstruction Software Benchmarking"
-    technologies: ["Computer Graphics", "Photogrammetry", "3D Reconstruction"]
+    technologies: ["CG", "Photogrammetry", "3D Reconstruction"]
     description: "Analyzed and improved the underlying principles of the Reality Capture 3D reconstruction software through extensive benchmarking using photogrammetry techniques."
 
   - name: "Undergraduate Group Research Program (UGRP)"
     role: "Undergraduate Researcher"
     date: "May 2021 - Feb 2022"
     project: "Interior Simulation using VR"
-    technologies: ["VR","3D Reconstruction", "Radar", "Photogrammetry"]
+    technologies: ["VR","CV","CG ","3D Reconstruction", "Photogrammetry"]
     description: "Implemented mirror reality environments using Radar and Photogrammetry. Simulated furniture placement in virtual space to provide immersive interior design experiences."
 ---
