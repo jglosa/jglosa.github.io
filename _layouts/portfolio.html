@@ -44,7 +44,7 @@ layout: default
             {% for edu in page.education %}
             <div style="padding-bottom: 1.5rem; margin-bottom: 1.5rem; {% unless forloop.last %}border-bottom: 1px solid var(--global-border-color);{% endunless %}">
               <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
-                {% if edu.degree %}{{ edu.degree }}{% endif %}{% if edu.degree and edu.department %}, {% endif %}{% if edu.department %}{{ edu.department }}{% endif %}
+                {{ edu.degree }}
               </div>
               <div style="color: var(--global-text-color-light); font-size: 0.9rem; margin-bottom: 0.2rem;">
                 {{ edu.school }}

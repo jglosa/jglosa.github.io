@@ -12,14 +12,12 @@ intro: |
 
 education:
   - school: "Pohang University of Science and Technology (POSTECH)"
-    degree: "M.S. in Computer Science"
+    degree: "M.S. in Computer Science and Engineering"
     date: "Feb 2026 – Present"
-    department: "H2CI Lab"
 
   - school: "Pohang University of Science and Technology (POSTECH)"
-    degree: "B.S. in Computer Science"
+    degree: "B.S. in Computer Scienceand Engineering"
     date: "Feb 2021 – Feb 2026"
-    department: "Department of Computer Science and Engineering"
 
 experiences:
   - company: "IC Lab"
