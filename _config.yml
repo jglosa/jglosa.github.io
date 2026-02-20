@@ -23,12 +23,12 @@ repository               : "jglosa/jglosa.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpeg"
   name             : "Jumi Kim"
   pronouns         : # example: "she/her"  
   bio              : # "Dept. of Computer Science & Engineering, POSTECH"
   location         : # "Pohang, South Korea"
-  employer         : "Pohang University of Science and Technology"
+  employer         : # "POSTECH"
   uri              : # URLß
   email            : "glosajumi@postech.ac.kr" 
 
