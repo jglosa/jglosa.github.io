@@ -88,3 +88,34 @@
     gap: 1rem;
   }
 }
+
+/* 1줄짜리 디자인 (Education 등에 사용) */
+.single-column-item {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--global-text-color);
+    margin-bottom: 0.2rem;
+  }
+  
+  .position, .date {
+    display: inline-block;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    margin-right: 1rem;
+  }
+
+  .description {
+    color: var(--global-text-color);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+}

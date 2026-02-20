@@ -42,18 +42,13 @@ layout: default
           <h2 class="section-title">Education</h2>
           <div class="experience-group">
             {% for edu in page.education %}
-            <div class="experience-item">
-              <div class="left-column">
+            <div class="single-column-item">
                 <div class="company-name">{{ edu.school }}</div>
                 {% if edu.degree %}<div class="position">{{ edu.degree }}</div>{% endif %}
                 <div class="date">{{ edu.date }}</div>
-              </div>
-              <div class="right-column">
-                {% if edu.department %}<div class="project-title">{{ edu.department }}</div>{% endif %}
                 {% if edu.description %}
                 <div class="description">{{ edu.description | markdownify }}</div>
                 {% endif %}
-              </div>
             </div>
             {% endfor %}
           </div>

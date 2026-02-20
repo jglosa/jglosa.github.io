@@ -25,9 +25,9 @@ experiences:
   - company: "IC Lab"
     position: "Undergraduate Intern"
     date: "Jul 2025 - Aug 2025"
-    project: "Digital Wellbeing"
+    project: "Digital Wellbeing using Forecasting system"
     technologies: ["HCI", "Java", "Kotlin", "C++"]
-    description: "Micro financial Advantage"
+    description: "Develop Goalcast: Goal-Directed Forecasting to Support Smartphone User Regulation"
   
   - company: "RWTH Aachen"
     position: "Exchange Student"
@@ -36,8 +36,9 @@ experiences:
   
   - company: "Conpapa"
     position: "Marketing Intern"
-    date: "Jun 2024 - Aug 2024"
-    description: ""
+    project: "Brand marketing"
+    date: "Jul 2024 - Aug 2024"
+    description: "making shorts & blog content"
 
   - company: "Korea Brain Research Institute"
     position: "Intern"
