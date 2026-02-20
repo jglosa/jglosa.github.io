@@ -86,11 +86,18 @@
   border-bottom: 2px solid var(--global-text-color);
 }
 
-/* 왼쪽 위 이름은 언제나 클릭 가능하게 예외 처리 */
-.masthead__menu-item.masthead__menu-item--lg.selected a {
-  pointer-events: auto;
-  cursor: pointer;
-  border-bottom: none;
+/* 왼쪽 위 이름(Logo)을 위한 독립적인 스타일 */
+.masthead__menu-item--lg a {
+  pointer-events: auto !important; /* 무조건 클릭 가능하게 강제 */
+  cursor: pointer !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important; /* 마우스 오버 시 부드러운 등장을 위해 투명 밑줄을 미리 깔아둠 */
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+/* 이름에 마우스가 닿았을 때(Hover) 밑줄 긋기 */
+.masthead__menu-item--lg a:hover {
+  border-bottom: 2px solid var(--global-text-color) !important;
 }
 
 /* 다크모드/라이트모드 토글 버튼을 가장 오른쪽으로 밀어내기 */

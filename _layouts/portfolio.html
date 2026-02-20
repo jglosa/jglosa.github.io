@@ -39,15 +39,15 @@ layout: default
         <!-- Education Section -->
         {% if page.education %}
         <div class="content-section">
-          <h2 class="section-title">🎓 Education</h2>
+          <h2 class="section-title">Education</h2>
           <div class="experience-group">
             {% for edu in page.education %}
             <div style="padding-bottom: 1.5rem; margin-bottom: 1.5rem; {% unless forloop.last %}border-bottom: 1px solid var(--global-border-color);{% endunless %}">
               <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
-                {{ edu.school }}
+                {% if edu.degree %}{{ edu.degree }}{% endif %}{% if edu.degree and edu.department %}, {% endif %}{% if edu.department %}{{ edu.department }}{% endif %}
               </div>
               <div style="color: var(--global-text-color-light); font-size: 0.9rem; margin-bottom: 0.2rem;">
-                {% if edu.degree %}{{ edu.degree }}{% endif %}{% if edu.degree and edu.department %}, {% endif %}{% if edu.department %}{{ edu.department }}{% endif %}
+                {{ edu.school }}
               </div>
               <div style="color: var(--global-text-color-light); font-size: 0.9rem;">
                 {{ edu.date }}
