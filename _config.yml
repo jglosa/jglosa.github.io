@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "profile.jpeg"
   name             : "Jumi Kim"
-  pronouns         : # example: "she/her"  
+  pronouns         : "she/her"  
   bio              : # "Dept. of Computer Science & Engineering, POSTECH"
   location         : # "Pohang, South Korea"
   employer         : # "POSTECH"
