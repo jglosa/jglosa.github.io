@@ -299,3 +299,36 @@
     }
   }
 }
+
+/* Page Navigation (개요 메뉴) 스타일 */
+.sidebar-nav {
+  margin-top: 2.5rem; /* 위쪽 여백 넉넉하게 */
+  border-top: 1px solid var(--global-border-color);
+  padding-top: 1.5rem;
+  text-align: left;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 1.2rem; /* 각 항목 사이의 간격을 넓힘 */
+  }
+
+  .nav__link {
+    font-size: 1.15rem; /* 글자 크기 키움 */
+    font-weight: 500;
+    color: var(--global-text-color-light); /* 기본 상태: 연한 글씨 */
+    text-decoration: none;
+    transition: all 0.2s ease-in-out; /* 마우스가 닿을 때 부드럽게 변하는 애니메이션 */
+
+    /* 마우스가 닿았을 때(:hover)와 현재 보고 있는 구역일 때(.active) */
+    &:hover,
+    &.active {
+      color: var(--global-text-color); /* 진한 글씨로 변경 */
+      font-weight: 700; /* 글씨 굵기도 굵게 변경 */
+    }
+  }
+}

@@ -174,18 +174,37 @@
     </ul>
   </div>
 
-  <div class="sidebar-nav" style="margin-top: 2rem; border-top: 1px solid var(--global-border-color); padding-top: 1rem;">
-    <ul style="list-style: none; padding: 0; margin: 0; text-align: left; font-size: 1rem; line-height: 1.8;">
-      <li style="margin-bottom: 0.5rem;">
-        <a href="#education" style="color: var(--global-text-color); text-decoration: none; font-weight: 600;">🎓 Education</a>
-      </li>
-      <li style="margin-bottom: 0.5rem;">
-        <a href="#experiences" style="color: var(--global-text-color); text-decoration: none; font-weight: 600;">🏃‍♀️‍➡️ Experiences</a>
-      </li>
-      <li style="margin-bottom: 0.5rem;">
-        <a href="#projects" style="color: var(--global-text-color); text-decoration: none; font-weight: 600;">👩‍💻 Projects & Honors</a>
-      </li>
+  <div class="sidebar-nav">
+    <ul class="nav__list">
+      <li><a href="#education" class="nav__link">🎓 Education</a></li>
+      <li><a href="#experiences" class="nav__link">🏃‍♀️‍➡️ Experiences</a></li>
+      <li><a href="#projects" class="nav__link">👩‍💻 Projects & Honors</a></li>
     </ul>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.sidebar-nav .nav__link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          // 화면 중간쯤 왔을 때 해당 섹션으로 인식하게 여유값(150)을 줌
+          if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
   
 </div>
