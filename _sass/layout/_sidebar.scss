@@ -300,35 +300,42 @@
   }
 }
 
-/* Page Navigation (개요 메뉴) 스타일 */
+/* ==========================================================================
+   Page Navigation (개요 메뉴) 스타일
+   ========================================================================== */
 .sidebar-nav {
-  margin-top: 2.5rem; /* 위쪽 여백 넉넉하게 */
-  border-top: 1px solid var(--global-border-color);
-  padding-top: 1.5rem;
+  clear: both; /* 위쪽 요소들과 겹치지 않게 정리 */
+  margin-top: 2rem !important; 
+  padding-top: 1.5rem !important;
+  border-top: 1px solid var(--global-border-color) !important; /* 얇은 구분선 확실하게 복구 */
   text-align: left;
 
   ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important; /* 불릿 포인트(동그라미) 완벽 제거 */
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   li {
-    margin-bottom: 1.2rem; /* 각 항목 사이의 간격을 넓힘 */
+    list-style: none !important;
+    margin-bottom: 1.2rem;
   }
 
   .nav__link {
-    font-size: 1.15rem; /* 글자 크기 키움 */
-    font-weight: 500;
-    color: var(--global-text-color-light); /* 기본 상태: 연한 글씨 */
-    text-decoration: none;
-    transition: all 0.2s ease-in-out; /* 마우스가 닿을 때 부드럽게 변하는 애니메이션 */
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 700 !important; /* 💡 항상 굵은 글씨 유지 */
+    color: var(--global-text-color) !important; /* 테마의 기본 글자색 사용 */
+    opacity: 0.35; /* 💡 핵심: 평소에는 투명도를 줘서 연하게 보이도록 설정 */
+    text-decoration: none !important; /* 기본 밑줄 완벽 제거 */
+    border-bottom: 0 !important; /* 호버 시 생기는 밑줄 방지 */
+    transition: opacity 0.2s ease-in-out; /* 부드럽게 진해지는 애니메이션 */
 
-    /* 마우스가 닿았을 때(:hover)와 현재 보고 있는 구역일 때(.active) */
     &:hover,
     &.active {
-      color: var(--global-text-color); /* 진한 글씨로 변경 */
-      font-weight: 700; /* 글씨 굵기도 굵게 변경 */
+      opacity: 1 !important; /* 마우스가 닿거나 해당 구역일 때 투명도 0%로 완전히 진하게! */
+      text-decoration: none !important;
     }
   }
 }
