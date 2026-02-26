@@ -3,27 +3,62 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <!-- <button><span class="navicon"></span></button> -->
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist">
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-          <!-- <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
-          </li> -->
+          
+          <li class="masthead__menu-item"><a href="#education" class="head-nav-link">Education</a></li>
+          <li class="masthead__menu-item"><a href="#experiences" class="head-nav-link">Experiences</a></li>
+          <li class="masthead__menu-item"><a href="#projects" class="head-nav-link">Projects & Honors</a></li>
+          
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.content-section');
+    const navLinks = document.querySelectorAll('.head-nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.style.opacity = '0.4'; // 평소엔 투명하게
+        link.style.fontWeight = 'normal';
+        if (link.getAttribute('href') === `#${current}`) {
+          link.style.opacity = '1'; // 선택되면 진하게
+          link.style.fontWeight = 'bold';
+        }
+      });
+    });
+
+    // 마우스 호버 효과
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        link.style.opacity = '1';
+      });
+      link.addEventListener('mouseleave', () => {
+        const currentHref = link.getAttribute('href');
+        // 현재 위치한 섹션이 아닐 때만 다시 투명하게 되돌림
+        let isCurrent = false;
+        sections.forEach(section => {
+          if (pageYOffset >= section.offsetTop - 150 && currentHref === `#${section.getAttribute('id')}`) {
+            isCurrent = true;
+          }
+        });
+        if (!isCurrent) link.style.opacity = '0.4';
+      });
+    });
+  });
+</script>
