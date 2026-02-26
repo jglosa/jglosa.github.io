@@ -31,6 +31,38 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        <div class="top-nav">
+          <ul class="nav__list">
+            <li><a href="#education" class="nav__link">🎓 Education</a></li>
+            <li><a href="#experiences" class="nav__link">🏃‍♀️‍➡️ Experiences</a></li>
+            <li><a href="#projects" class="nav__link">👩‍💻 Projects & Honors</a></li>
+          </ul>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.top-nav .nav__link');
+
+            window.addEventListener('scroll', () => {
+              let current = '';
+              sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                  current = section.getAttribute('id');
+                }
+              });
+
+              navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                  link.classList.add('active');
+                }
+              });
+            });
+          });
+        </script>
+        
         <!-- Intro Section -->
         <div class="intro-section">
           {{ page.intro | markdownify }}

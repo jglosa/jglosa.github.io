@@ -25,7 +25,7 @@ education:
     date: "Feb 2021 – Feb 2026"
 
 experiences:
-  - company: "IC Lab"
+  - company: "IC Lab, KAIST"
     position: "Undergraduate Intern"
     date: "Jul 2025 - Aug 2025"
     project: "GoalCast: Digital Wellbeing Forecast"
@@ -41,7 +41,7 @@ experiences:
       * Created video and written content for branding channels.
       * Improved SEO and user engagement through strategic content planning.
 
-  - company: "Korea Brain Research Institute"
+  - company: "Korea Brain Research Institute (KBRI)"
     position: "Undergraduate Intern"
     project: "Vision-based Animal Behavior Tracking"
     date: "Jul 2023 - Aug 2023"
