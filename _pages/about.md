@@ -16,6 +16,10 @@ education:
     degree: "M.S. in Computer Science and Engineering"
     date: "Feb 2026 – Present"
 
+  - school: "Rheinisch-Westfälische Technische Hochschule Aachen University"
+    degree: "Exchange Student"
+    date: "Aug 2025 – Feb 2026"
+
   - school: "Pohang University of Science and Technology (POSTECH)"
     degree: "B.S. in Computer Science and Engineering"
     date: "Feb 2021 – Feb 2026"
@@ -25,22 +29,25 @@ experiences:
     position: "Undergraduate Intern"
     date: "Jul 2025 - Aug 2025"
     project: "GoalCast: Digital Wellbeing Forecast"
-    technologies: ["HCI", "Java", "Kotlin", "Android", "Mobile Computing"]
-    description: "Developed 'GoalCast', a smartphone usage forecasting application aimed at improving digital wellbeing. Conducted user studies to observe behavioral changes in screen time and analyzed the collected usage data to evaluate the app's effectiveness."
+    description: |
+      * Developed 'GoalCast', a smartphone usage forecasting application aimed at improving digital wellbeing.
+      * Conducted user studies to observe behavioral changes in screen time and analyzed the collected usage data to evaluate the app's effectiveness.
   
   - company: "Conpapa"
     position: "Marketing Intern"
     project: "Brand marketing"
     date: "Jul 2024 - Aug 2024"
-    technologies: ["SEO", "Premiere Pro", "Content Marketing"]
-    description: "Created video and written content for branding channels. Improved SEO and user engagement through strategic content planning."
+    description: |
+      * Created video and written content for branding channels.
+      * Improved SEO and user engagement through strategic content planning.
 
   - company: "Korea Brain Research Institute"
     position: "Undergraduate Intern"
     project: "Vision-based Animal Behavior Tracking"
     date: "Jul 2023 - Aug 2023"
-    technologies: ["CV", "Matlab", "Python", "Behavior Tracking"]
-    description: "Conducted behavioral experiments to assess stress responses in rodents under social stress conditions. Assisted in vision-based animal behavior tracking and brain image preprocessing."
+    description: |
+      * Conducted behavioral experiment
+      * Vision-based animal tracking
 
 research_projects:
   - name: "Research Project II"

@@ -93,40 +93,23 @@ layout: default
         <!-- Experiences Section -->
         {% if page.experiences %}
         <div class="content-section" id="experiences">
-          <h2 class="section-title">💼 Experiences</h2>
-          <div class="experience-group">
-            {% for exp in page.experiences %}
-            <div class="experience-item">
-              <div class="left-column">
-                <div class="company-name">{{ exp.company }}</div>
-                {% if exp.position %}<div class="position">{{ exp.position }}</div>{% endif %}
-                <div class="date">{{ exp.date }}</div>
+          <h2 class="section-title">🏃‍♀️‍➡️ Experiences</h2>
+          <div class="education-timeline"> {% for exp in page.experiences %}
+            <div class="timeline-item">
+              <div class="timeline-dot"></div> <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
+                {{ exp.company }}
               </div>
-              <div class="right-column">
-                {% if exp.projects %}
-                  {% for proj in exp.projects %}
-                    <div class="project-title">{{ proj.title }}</div>
-                    {% if proj.technologies %}
-                    <div class="tech-tags">
-                      {% for tech in proj.technologies %}
-                      <span class="tech-tag">{{ tech }}</span>
-                      {% endfor %}
-                    </div>
-                    {% endif %}
-                    <div class="description">{{ proj.description | markdownify }}</div>
-                  {% endfor %}
-                {% else %}
-                  {% if exp.project %}<div class="project-title">{{ exp.project }}</div>{% endif %}
-                  {% if exp.technologies %}
-                  <div class="tech-tags">
-                    {% for tech in exp.technologies %}
-                    <span class="tech-tag">{{ tech }}</span>
-                    {% endfor %}
-                  </div>
-                  {% endif %}
-                  <div class="description">{{ exp.description | markdownify }}</div>
-                {% endif %}
+              <div style="color: var(--global-text-color-light); font-size: 0.9rem; margin-bottom: 0.2rem;">
+                {% if exp.position %}{{ exp.position }}{% endif %}{% if exp.position and exp.project %} — {% endif %}{% if exp.project %}{{ exp.project }}{% endif %}
               </div>
+              <div style="color: var(--global-text-color-light); font-size: 0.9rem;">
+                {{ exp.date }}
+              </div>
+              {% if exp.description %}
+              <div style="color: var(--global-text-color); line-height: 1.6; font-size: 0.95rem; margin-top: 0.5rem;">
+                {{ exp.description | markdownify }}
+              </div>
+              {% endif %}
             </div>
             {% endfor %}
           </div>
