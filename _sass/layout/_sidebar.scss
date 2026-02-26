@@ -324,8 +324,8 @@
 
   .nav__link {
     display: inline-block;
-    font-size: 1.15rem;
-    font-weight: 400 !important; /* 💡 항상 굵은 글씨 유지 */
+    font-size: 1.00rem;
+    font-weight: 500 !important; /* 💡 항상 굵은 글씨 유지 */
     color: var(--global-text-color) !important; /* 테마의 기본 글자색 사용 */
     opacity: 0.35; /* 💡 핵심: 평소에는 투명도를 줘서 연하게 보이도록 설정 */
     text-decoration: none !important; /* 기본 밑줄 완벽 제거 */
