@@ -38,18 +38,39 @@ layout: default
 
         <!-- Education Section -->
         {% if page.education %}
+        <style>
+          .education-timeline {
+            margin-top: 1.5rem;
+            padding-left: 0.5rem; /* 전체 타임라인을 살짝 오른쪽으로 밀어줌 */
+          }
+          .timeline-item {
+            position: relative;
+            padding-left: 1.5rem; /* 선과 글자 사이의 간격 */
+            padding-bottom: 2rem; /* 각 학위 사이의 간격 */
+            border-left: 2px solid var(--global-border-color); /* 세로선 긋기 */
+          }
+          .timeline-item:last-child {
+            border-color: transparent; /* 마지막 항목은 아래로 이어지는 선을 숨김 */
+            padding-bottom: 0;
+          }
+          .timeline-dot {
+            position: absolute;
+            left: -7px; /* 세로선 정중앙에 점이 오도록 위치 조정 */
+            top: 0.3rem; /* 글자 첫 줄과 높이를 맞춤 */
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8EA58C; /* 💡 요청한 예쁜 그린 색상 적용! */
+            z-index: 1; /* 선 위로 점이 뚜렷하게 보이도록 설정 */
+          }
+        </style>
+
         <div class="content-section" id="education">
           <h2 class="section-title">🎓 Education</h2>
-          <div class="experience-group">
+          <div class="education-timeline">
             {% for edu in page.education %}
-            
-            {% if forloop.last %}
-              <div style="padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
-            {% else %}
-              <div style="padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--global-border-color);">
-            {% endif %}
-            
-              <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div> <div style="font-size: 1.1rem; font-weight: 700; color: var(--global-text-color); margin-bottom: 0.3rem;">
                 {{ edu.degree }}
               </div>
               <div style="color: var(--global-text-color-light); font-size: 0.9rem; margin-bottom: 0.2rem;">
