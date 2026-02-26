@@ -52,11 +52,12 @@ experiences:
 research_projects:
   - name: "Research Project II"
     date: "Sep 2025 - Dec 2025"
-    image: "researchproject_2.jpeg"
+    image: "researchproject_2.png"
     description: "Feature and User Review Analysis of Commercial Digital Wellbeing Apps"
   
   - name: "Mobile & Ubiquitous Computing Project"
     date: "Feb 2025 - Jun 2025"
+    image: "ubiquitous.png"
     description: "Kkubeok: Microsleep-aware Rest Recommendation App"
 
   - name: "Research Project I"
@@ -66,13 +67,16 @@ research_projects:
 
   - name: "POSTECH Metaverse Contents Contest"
     date: "Jan 2024"
+    image: "metaverse.png"
     project: "VR Food-Making Simulation Game using Oculus Quest 2"
 
   - name: "Computer Graphics Lab"
     date: "Jan 2023 - Feb 2023"
-    project: "3D Reconstruction Software Benchmarking"
+    image: "graphics_lab.png"
+    description: "3D Reconstruction Software Benchmarking"
 
   - name: "Undergraduate Group Research Program (UGRP)"
     date: "May 2021 - Feb 2022"
+    image: "ugrp.png"
     description: "Interior Simulation using VR"
 ---
