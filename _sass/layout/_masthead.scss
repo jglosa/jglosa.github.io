@@ -105,3 +105,26 @@
   margin-left: auto;
   cursor: pointer;
 }
+
+/* 1. 이름(Logo) 부분에 margin-right: auto를 추가하여 메뉴들을 오른쪽으로 밉니다. */
+.masthead__menu-item--lg {
+  margin-right: auto; /* 이 줄을 추가하세요 */
+  padding-right: 2em;
+  font-weight: 700;
+}
+
+/* 2. 네비게이션 링크(Education 등)의 글씨 크기와 기본 색상을 설정합니다. */
+.head-nav-link {
+  font-size: 0.85rem;      /* 글씨 크기를 더 작게 조정 (기존보다 축소) */
+  color: var(--global-text-color);
+  opacity: 0.5;            /* 기본 상태를 더 연하게 설정 (0.4 ~ 0.5 추천) */
+  transition: all 0.2s ease-in-out;
+}
+
+/* 3. 메뉴 아이템들 사이의 간격을 살짝 조정하고 싶다면 추가 */
+.masthead__menu-item {
+  margin-left: 1.5em;      /* 메뉴 사이의 간격 */
+  &--lg {
+    margin-left: 0;        /* 이름은 왼쪽 끝에 붙도록 */
+  }
+}
