@@ -399,3 +399,19 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/* ==========================================================================
+   Intro Section Link Style (about.md 소개글 링크)
+   ========================================================================== */
+.intro-section a {
+  color: #8EA58C !important; /* 원하는 색상으로 강제 변경 */
+  text-decoration: none !important; /* 밑줄 완벽하게 제거 */
+  font-weight: 600; /* 밑줄이 없어진 대신 링크인 걸 티 내기 위해 살짝 굵게 설정 */
+  transition: opacity 0.2s ease-in-out; /* 마우스 올릴 때 부드러운 애니메이션 준비 */
+}
+
+/* 마우스를 올렸을 때(Hover)의 효과 */
+.intro-section a:hover {
+  opacity: 0.7; /* 마우스를 올리면 살짝 투명해지면서 클릭할 수 있다는 걸 알려줌 */
+  text-decoration: none !important;
+}

@@ -8,7 +8,8 @@ redirect_from:
   - /about.html
 
 intro: |
-  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I am currently advised by [Prof. Eunkyung Jo](https://eunkyungjo.com/) and conduct my research in the H2CI Lab. I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
+  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Dr. Eunkyung Jo](https://eunkyungjo.com/) in the H2CI Lab. 
+  I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
 
 education:
   - school: "Pohang University of Science and Technology (POSTECH)"
@@ -16,7 +17,7 @@ education:
     date: "Feb 2026 – Present"
 
   - school: "Pohang University of Science and Technology (POSTECH)"
-    degree: "B.S. in Computer Scienceand Engineering"
+    degree: "B.S. in Computer Science and Engineering"
     date: "Feb 2021 – Feb 2026"
 
 experiences:
