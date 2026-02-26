@@ -86,18 +86,19 @@
   border-bottom: 2px solid var(--global-text-color);
 }
 
-/* 왼쪽 위 이름(Logo)을 위한 독립적인 스타일 */
+/* 왼쪽 위 이름(Logo)을 위한 스타일 */
 .masthead__menu-item--lg a {
-  pointer-events: auto !important; /* 무조건 클릭 가능하게 강제 */
-  cursor: pointer !important;
+  color: #4a4e52 !important;      /* 기본 색상: 이미지에서 추출한 짙은 그레이 */
+  font-weight: 700;
   text-decoration: none !important;
-  border-bottom: 2px solid transparent !important; /* 마우스 오버 시 부드러운 등장을 위해 투명 밑줄을 미리 깔아둠 */
-  transition: border-bottom 0.2s ease-in-out;
-}
-
-/* 이름에 마우스가 닿았을 때(Hover) 밑줄 긋기 */
-.masthead__menu-item--lg a:hover {
-  border-bottom: 2px solid var(--global-text-color) !important;
+  border-bottom: none !important; /* 밑줄 완전히 제거 */
+  transition: color 0.3s ease-in-out; /* 색상 변화를 부드럽게 */
+  
+  &:hover {
+    /* 마우스를 올렸을 때 변할 색상 (둘 중 마음에 드는 것을 선택하세요) */
+    color: #738a6e !important;    /* 옵션 1: 인트로 링크와 맞춘 세이지 그린 */
+    border-bottom: none !important; /* 호버 시에도 밑줄 생기지 않음 */
+  }
 }
 
 /* 다크모드/라이트모드 토글 버튼을 가장 오른쪽으로 밀어내기 */
