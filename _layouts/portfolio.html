@@ -143,72 +143,124 @@ layout: default
         <!-- Research Projects Section -->
         {% if page.research_projects %}
         <style>
-          .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 화면 크기에 따라 자동 배치 */
-            gap: 2rem;
+          .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
             margin-top: 1.5rem;
           }
 
-          .project-card {
-            background: var(--global-bg-color);
-            border: 1px solid var(--global-border-color);
-            border-radius: 8px;
+          .project-entry {
+            display: flex;
+            align-items: flex-start; /* 날짜와 카드의 시작 높이를 맞춤 */
+            gap: 1.5rem;
+          }
+
+          /* 왼쪽 날짜 영역 */
+          .project-date-side {
+            min-width: 100px;
+            font-size: 0.9rem;
+            color: var(--global-text-color-light);
+            padding-top: 1.2rem; /* 카드 내부 텍스트 위치와 시각적 정렬 */
+            text-align: right;
+          }
+
+          /* 오른쪽 카드 영역 */
+          .project-card-overlay {
+            position: relative;
+            flex-grow: 1;
+            min-height: 140px;
+            border-radius: 12px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: #222; /* 이미지가 로드되기 전 기본 배경 */
+          }
+
+          /* 배경 이미지: 흐리게(Blur) 처리 */
+          .project-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.6) blur(2px); /* 이미지를 어둡게 하고 살짝 흐리게 */
             transition: transform 0.3s ease;
           }
 
-          .project-card:hover {
-            transform: translateY(-5px); /* 살짝 떠오르는 효과 */
+          .project-card-overlay:hover .project-bg-image {
+            transform: scale(1.05); /* 마우스 올리면 이미지가 살짝 커짐 */
           }
 
-          .project-image {
+          /* 그라데이션 오버레이: 글자 가독성을 위해 왼쪽을 더 어둡게 */
+          .project-gradient-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 180px;
-            object-fit: cover; /* 이미지 비율 맞춤 */
-            background-color: #f2f3f3; /* 이미지 없을 때 배경색 */
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
           }
 
-          .project-content {
-            padding: 1.2rem;
+          /* 카드 내부 텍스트 */
+          .project-text-content {
+            position: relative;
+            z-index: 2;
+            padding: 1.5rem 2rem;
+            color: #ffffff !important; /* 배경이 어두우므로 글자는 항상 흰색 */
           }
 
-          .project-title {
-            font-size: 1.1rem;
+          .project-text-content .p-name {
+            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--global-text-color);
+            margin-bottom: 0.4rem;
+            color: #ffffff !important;
           }
 
-          .project-date {
-            font-size: 0.85rem;
-            color: var(--global-text-color-light);
-            margin-bottom: 0.8rem;
-          }
-
-          .project-description {
-            font-size: 0.9rem;
+          .project-text-content .p-desc {
+            font-size: 0.95rem;
             line-height: 1.5;
-            color: var(--global-text-color);
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9) !important;
+          }
+
+          /* 모바일 대응 */
+          @media (max-width: 768px) {
+            .project-entry {
+              flex-direction: column;
+              gap: 0.5rem;
+            }
+            .project-date-side {
+              text-align: left;
+              min-width: auto;
+              padding-top: 0;
+            }
           }
         </style>
 
         <div class="content-section" id="projects">
           <h2 class="section-title">👩‍💻 Projects & Honors</h2>
-          <div class="project-grid">
+          <div class="project-list">
             {% for rp in page.research_projects %}
-            <div class="project-card">
-              {% if rp.image %}
-                <img src="{{ base_path }}/images/{{ rp.image }}" alt="{{ rp.name }}" class="project-image">
-              {% else %}
-                <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: #ccc;">No Image</div>
-              {% endif %}
+            <div class="project-entry">
+              <div class="project-date-side">{{ rp.date }}</div>
               
-              <div class="project-content">
-                <div class="project-title">{{ rp.name }}</div>
-                <div class="project-date">{{ rp.date }}</div>
-                <div class="project-description">
-                  {{ rp.description | markdownify | remove: '<p>' | remove: '</p>' }}
+              <div class="project-card-overlay">
+                {% if rp.image %}
+                  <img src="{{ base_path }}/images/{{ rp.image }}" class="project-bg-image" alt="">
+                  <div class="project-gradient-layer"></div>
+                {% else %}
+                  <div class="project-gradient-layer" style="background: linear-gradient(135deg, #8ea58c 0%, #6d826b 100%); opacity: 1;"></div>
+                {% endif %}
+                
+                <div class="project-text-content">
+                  <div class="p-name">{{ rp.name }}</div>
+                  <div class="p-desc">
+                    {{ rp.description | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </div>
                 </div>
               </div>
             </div>

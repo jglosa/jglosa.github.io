@@ -61,7 +61,7 @@ research_projects:
 
   - name: "Research Project I"
     date: "Feb 2025 - Jun 2025"
-    image: "researchproject_2.jpeg"
+    image: "researchproject_1.jpeg"
     description : "Interactive Segmentation of 3D Brain MRI (Medical Image Processing Lab)"
 
   - name: "POSTECH Metaverse Contents Contest"
