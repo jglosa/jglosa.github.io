@@ -142,27 +142,74 @@ layout: default
 
         <!-- Research Projects Section -->
         {% if page.research_projects %}
+        <style>
+          .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 화면 크기에 따라 자동 배치 */
+            gap: 2rem;
+            margin-top: 1.5rem;
+          }
+
+          .project-card {
+            background: var(--global-bg-color);
+            border: 1px solid var(--global-border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+          }
+
+          .project-card:hover {
+            transform: translateY(-5px); /* 살짝 떠오르는 효과 */
+          }
+
+          .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* 이미지 비율 맞춤 */
+            background-color: #f2f3f3; /* 이미지 없을 때 배경색 */
+          }
+
+          .project-content {
+            padding: 1.2rem;
+          }
+
+          .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--global-text-color);
+          }
+
+          .project-date {
+            font-size: 0.85rem;
+            color: var(--global-text-color-light);
+            margin-bottom: 0.8rem;
+          }
+
+          .project-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--global-text-color);
+          }
+        </style>
+
         <div class="content-section" id="projects">
           <h2 class="section-title">👩‍💻 Projects & Honors</h2>
-          <div class="experience-group">
+          <div class="project-grid">
             {% for rp in page.research_projects %}
-            <div class="experience-item">
-              <div class="left-column">
-                <div class="company-name">{{ rp.name }}</div>
-                {% if rp.type %}<div class="position">{{ rp.type }}</div>{% endif %}
-                {% if rp.role %}<div class="position">{{ rp.role }}</div>{% endif %}
-                <div class="date">{{ rp.date }}</div>
-              </div>
-              <div class="right-column">
-                {% if rp.project %}<div class="project-title">{{ rp.project }}</div>{% endif %}
-                {% if rp.technologies %}
-                <div class="tech-tags">
-                  {% for tech in rp.technologies %}
-                  <span class="tech-tag">{{ tech }}</span>
-                  {% endfor %}
+            <div class="project-card">
+              {% if rp.image %}
+                <img src="{{ base_path }}/images/{{ rp.image }}" alt="{{ rp.name }}" class="project-image">
+              {% else %}
+                <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: #ccc;">No Image</div>
+              {% endif %}
+              
+              <div class="project-content">
+                <div class="project-title">{{ rp.name }}</div>
+                <div class="project-date">{{ rp.date }}</div>
+                <div class="project-description">
+                  {{ rp.description | markdownify | remove: '<p>' | remove: '</p>' }}
                 </div>
-                {% endif %}
-                <div class="description">{{ rp.description | markdownify }}</div>
               </div>
             </div>
             {% endfor %}

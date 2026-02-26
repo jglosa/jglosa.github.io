@@ -51,44 +51,28 @@ experiences:
 
 research_projects:
   - name: "Research Project II"
-    role: ""
     date: "Sep 2025 - Dec 2025"
-    project: "Feature and User Review Analysis of Commercial Digital Wellbeing Apps"
-    technologies: ["HCI", "Qualitative Analysis", "Inductive Thematic Analysis"]
-    description: "Conducted an inductive thematic analysis to systematically structure and evaluate the core features of commercial digital wellbeing applications. Developed a qualitative codebook to analyze user reviews, aiming to derive actionable design implications for future wellbeing systems."
+    image: "researchproject_2.jpeg"
+    description: "Feature and User Review Analysis of Commercial Digital Wellbeing Apps"
   
   - name: "Mobile & Ubiquitous Computing Project"
-    role: ""
     date: "Feb 2025 - Jun 2025"
-    project: "Kkubeok: Microsleep-aware Rest Recommendation App"
-    technologies: ["HCI", "Java", "Kotlin", "Android", "Sensor Data"]
-    description: "Developed 'Kkubeok', an Android application designed to detect and analyze user dozing and microsleep using smartphone sensor data. Implemented a system that recommends personalized resting and napping schedules based on real-time detection to enhance user wellbeing."
+    description: "Kkubeok: Microsleep-aware Rest Recommendation App"
 
   - name: "Research Project I"
-    role: ""
     date: "Feb 2025 - Jun 2025"
-    project: "Interactive Segmentation of 3D Brain MRI (Medical Image Processing Lab)"
-    technologies: ["CV", "CG", "PyTorch", "Python"]
-    description: "Applied Vision Transformer (ViT)-based interactive segmentation techniques to medical imaging. Extended 2D segmentation outputs into 3D volumes via slice-to-slice label propagation."
+    image: "researchproject_2.jpeg"
+    description : "Interactive Segmentation of 3D Brain MRI (Medical Image Processing Lab)"
 
   - name: "POSTECH Metaverse Contents Contest"
-    role: "Grand Prize Winner"
     date: "Jan 2024"
     project: "VR Food-Making Simulation Game using Oculus Quest 2"
-    technologies: ["VR", "Unity", "C#", "Oculus Quest 2"]
-    description: "Developed a VR food-making game simulating a restaurant environment. Focused on enhancing the tactile cooking experience using VR controllers, differentiating from existing food games by emphasizing embodied realism."
 
   - name: "Computer Graphics Lab"
-    role: ""
     date: "Jan 2023 - Feb 2023"
     project: "3D Reconstruction Software Benchmarking"
-    technologies: ["CG", "Photogrammetry", "3D Reconstruction"]
-    description: "Analyzed and improved the underlying principles of the Reality Capture 3D reconstruction software through extensive benchmarking using photogrammetry techniques."
 
   - name: "Undergraduate Group Research Program (UGRP)"
-    role: ""
     date: "May 2021 - Feb 2022"
-    project: "Interior Simulation using VR"
-    technologies: ["VR","CV","CG ","3D Reconstruction", "Photogrammetry"]
-    description: "Implemented mirror reality environments using Radar and Photogrammetry. Simulated furniture placement in virtual space to provide immersive interior design experiences."
+    description: "Interior Simulation using VR"
 ---
