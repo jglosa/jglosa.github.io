@@ -53,7 +53,7 @@ research_projects:
   - name: "Thematic Analysis of Commercial Digital Wellbeing Apps"
     date: "Sep 2025 - Dec 2025"
     image: "researchproject_2.png"
-    description: "Advisor: Eunkung Jo"
+    description: "Advisor: Prof. Eunkung Jo"
   
   - name: "Mobile & Ubiquitous Computing Project"
     date: "Feb 2025 - Jun 2025"
