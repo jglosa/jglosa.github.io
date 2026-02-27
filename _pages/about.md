@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 
 intro: |
-  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Dr. Eunkyung Jo](https://eunkyungjo.com/) in the H2CI Lab. 
+  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Prof. Eunkyung Jo](https://eunkyungjo.com/) in the H2CI Lab. 
   I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
 
 education:
@@ -30,9 +30,9 @@ experiences:
     date: "Jul 2025 - Aug 2025"
     project: "GoalCast: Digital Wellbeing Forecast"
     description: |
-      * Developed 'GoalCast', a smartphone usage forecasting application aimed at improving digital wellbeing
-      * Conducted user studies to observe behavioral changes in screen time and analyzed the collected usage data
-  
+      * **Professor: Uichin Lee**
+      * Developed and evaluated 'GoalCast', a smartphone usage forecasting application, through user studies and behavioral data analysis
+
   - company: "Conpapa"
     position: "Marketing Intern"
     project: "Brand marketing"
@@ -46,24 +46,28 @@ experiences:
     project: "Vision-based Animal Behavior Tracking"
     date: "Jul 2023 - Aug 2023"
     description: |
-      * Vision-based animal behavior tracking and brain image preprocessing
-      * Conductedc behavioral experiments to assess stress responses in rodents under social stress conditions
+      * **Principal Investigator: Sukwon Lee**
+      * Performed vision-based behavior tracking and brain image preprocessing to assess rodent stress responses in social experiments
 
 research_projects:
-  - name: "Research Project II"
+  - name: "Thematic Analysis of Commercial Digital Wellbeing Apps"
     date: "Sep 2025 - Dec 2025"
     image: "researchproject_2.png"
-    description: "Feature and user review thematic analysis of commercial digital wellbeing apps"
+    description: |
+      * **Advisor: Prof. Eunkyung Jo**
+      * Conducted feature and user review thematic anlysis of commercial digital wellbeing applications
   
   - name: "Mobile & Ubiquitous Computing Project"
     date: "Feb 2025 - Jun 2025"
     image: "ubiquitous.png"
     description: "Kkubeok: Microsleep-aware Rest Recommendation App"
 
-  - name: "Research Project I"
+  - name: "Interactive 3D Brain MRI Segmentation"
     date: "Feb 2025 - Jun 2025"
     image: "researchproject_1.jpeg"
-    description : "Interactive segmentation of 3D Brain MRI using ViT and label propagation (Medical Image Processing Lab, MIP)"
+    description : |
+      * **Advisor: Prof. Ilwoo Lyu**
+      * Implemented ViT and label propagation for interactive 3D Brain MRI segmentation at the Medical Image Processing Lab (MIP)
 
   - name: "POSTECH Metaverse Contents Contest"
     date: "Jan 2024"
@@ -73,7 +77,9 @@ research_projects:
   - name: "Computer Graphics Lab"
     date: "Jan 2023 - Feb 2023"
     image: "graphics_lab.png"
-    description: "3D reconstruction software benchmarking and improvement"
+    description: |
+      * **Advisor: Prof. Seungyong Lee**
+      * 3D reconstruction software benchmarking and improvement
 
   - name: "Undergraduate Group Research Program (UGRP)"
     date: "May 2021 - Feb 2022"
