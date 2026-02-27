@@ -53,7 +53,7 @@ research_projects:
   - name: "Thematic Analysis of Commercial Digital Wellbeing Apps"
     date: "Sep 2025 - Dec 2025"
     image: "researchproject_2.png"
-    description: "Conducted feature and user review thematic anlysis of commercial digital wellbeing applications (Advisor: Eunkung Jo)"
+    description: "Advisor: Eunkung Jo"
   
   - name: "Mobile & Ubiquitous Computing Project"
     date: "Feb 2025 - Jun 2025"
@@ -63,7 +63,7 @@ research_projects:
   - name: "Interactive 3D Brain MRI Segmentation"
     date: "Feb 2025 - Jun 2025"
     image: "researchproject_1.jpeg"
-    description : "Implemented interactive 3D Brain MRI segmentation using ViT and label propagation at the Mdeical Image Processing Lab (Advisor: Prof. Ilwoo Lyu)"
+    description : "Advisor: Prof. Ilwoo Lyu"
 
   - name: "POSTECH Metaverse Contents Contest"
     date: "Jan 2024"
