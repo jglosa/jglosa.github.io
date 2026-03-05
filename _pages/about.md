@@ -9,7 +9,8 @@ redirect_from:
 
 intro: |
   👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Prof. Eunkyung Jo](https://eunkyungjo.com/) in the H2CI Lab. 
-  I'm interested in how technology shapes the way we relate to the world and to one another. Through human-centered computing, I hope to design systems that genuinely support and empower the people who use them.
+  
+  I'm interested in Digital Wellbeing, specifically exploring how we can better design and utilize Digital Self-Control Tools (DSCTs). Through human-centered computing, I hope to build systems that genuinely empower people to form healthier relationships with their devices.
 
 education:
   - school: "Pohang University of Science and Technology (POSTECH)"
