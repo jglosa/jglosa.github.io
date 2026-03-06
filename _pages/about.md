@@ -31,7 +31,7 @@ experiences:
     date: "Jul 2025 - Aug 2025"
     project: "GoalCast: Digital Wellbeing Forecast"
     description: |
-      * Professor: Uichin Lee
+      * Advisor: Uichin Lee
       * Developed and evaluated 'GoalCast', a smartphone usage forecasting application, through user studies and behavioral data analysis
 
   - company: "Conpapa"
@@ -47,7 +47,7 @@ experiences:
     project: "Vision-based Animal Behavior Tracking"
     date: "Jul 2023 - Aug 2023"
     description: |
-      * Principal Investigator: Sukwon Lee
+      * Supervisor: Sukwon Lee
       * Performed vision-based behavior tracking and brain image preprocessing to assess rodent stress responses in social experiments
 
 research_projects:
