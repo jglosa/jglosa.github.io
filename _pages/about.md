@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 
 intro: |
-  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Prof. Eunkyung Jo](https://eunkyungjo.com/) in the H2CI Lab. 
+  👋 Hello! I'm a Master's student in [Computer Science and Engineering](https://cse.postech.ac.kr/csepostech/index.do#none) at [POSTECH](https://www.postech.ac.kr/eng). I work with [Prof. Eunkyung Jo](https://eunkyungjo.com/) in the [H2CI Lab](https://h2ci-lab.com/). 
   
   I'm interested in Digital Wellbeing, specifically exploring how we can better design and utilize Digital Self-Control Tools (DSCTs). Through human-centered computing, I hope to build systems that genuinely empower people to form healthier relationships with their devices.
 
